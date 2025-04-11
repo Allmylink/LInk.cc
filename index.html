@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tap to Join  </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: radial-gradient(circle, #0f0c29, #302b63, #24243e);
+            color: white;
+            text-align: center;
+            margin: 0;
+        }
+        .container {
+            position: relative;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
+        .ghost {
+            font-size: 60px;
+            cursor: pointer;
+            animation: float 2s infinite ease-in-out;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        #smartlink {
+            display: none;
+            font-size: 18px;
+            color: white;
+            text-decoration: none;
+            background: #ff5722;
+            padding: 12px 25px;
+            border-radius: 8px;
+            margin-top: 20px;
+            display: inline-block;
+            position: relative;
+            transition: background 0.3s;
+        }
+        #smartlink:hover {
+            background: #e64a19;
+        }
+
+        /* Decorative pulse effect */
+        #smartlink::before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            border-radius: 12px;
+            background: rgba(255, 87, 34, 0.3);
+            animation: pulse 2s infinite;
+            z-index: -1;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="ghost" onclick="shfaqLinkun()">👻</div>
+        <p>Tap to join in my private page</p>
+        <a id="smartlink" href="https://securelysmrt.com/s?a=270379&sm=50468&co=332044&mt=16&s1=futu mer te qivja" target="_blank">Go to the link</a>
+    </div>
+    <script>
+        function shfaqLinkun() {
+            document.querySelector(".ghost").style.display = "none";
+            document.querySelector("#smartlink").style.display = "inline-block";
+        }
+    </script>
+</body>
+</html>
